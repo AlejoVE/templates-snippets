@@ -1,68 +1,101 @@
-
 :root {
+	--primary: #1073ba;
+	--secondary: #00da55;
+	--gray: #3b3b3b;
+	--black: #1f1e1e;
+	--lightGray: #e1e1e1;
 
-    --primary: #1073BA;
-    --secondary: #00DA55;
-    --gray: #3B3B3B;
-    --black: #1F1E1E;
-    --lightGray: #e1e1e1;
+	--separation: 5rem;
 
-    --separation: 5rem;
+	--mainFont: 'Roboto', sans-serif;
+	--secondaryFont: 'Lato', sans-serif;
 
-    --mainFont: 'Roboto', sans-serif;
-    --secondaryFont: 'Lato', sans-serif;
-
-    --border: 1px solid red;
+	--border: 1px solid red;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%; /*1rem = 10px*/
+	box-sizing: border-box;
+	font-size: 62.5%; /*1rem = 10px*/
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+/* Percentage-based heights, source: https://www.joshwcomeau.com/css/custom-css-reset/  */
+html,
+body {
+	height: 100%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+* {
+	margin: 0;
 }
 
 body {
-    font-family: var(--mainFont);
-    font-size: 1.6rem;
-    line-height: 1.5;
+	font-family: var(--mainFont);
+	font-size: 1.6rem;
+	line-height: 1.5;
 }
-
 
 /* Globals */
 .container {
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
+	max-width: 120rem;
+	width: 90%;
+	margin: 0 auto;
 }
 
-h1, h2, h3 {
-    font-weight: 900;
-    font-family: var(--secondaryFont);
-    margin: calc(var(--separation / 2)) 0;
+h1,
+h2,
+h3 {
+	font-weight: 900;
+	font-family: var(--secondaryFont);
+	margin: calc(var(--separation / 2)) 0;
 }
 
 h1 {
-    font-size: 4.4rem;
+	font-size: 4.4rem;
 }
 
 h2 {
-    font-size: 3.6rem;
+	font-size: 3.6rem;
 }
 
 h3 {
-    font-size: 2.8rem;
+	font-size: 2.8rem;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* To prevent these elements from using the default system font, source: https://www.joshwcomeau.com/css/custom-css-reset/  */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
 }
 
 /* Utilities */
 
 .text-center {
-    text-align: center;
+	text-align: center;
 }
